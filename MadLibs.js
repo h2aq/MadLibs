@@ -75,3 +75,4 @@ console.log(`There was once upon a time in ${number[0].toUpperCase()} BC where a
      who had an affable aura to them approached the bunnies as they were playing ${game[0].toUpperCase()} which could be easily mistaken as a professional game when viewed from afar.
      The humane man asked the bunnies if they wanted a ${verb[1].toUpperCase()} the ${adjectives[7].toUpperCase()} bunnies kindly accepted, and they were all happy. Then the Earth ${verb[2].toUpperCase()} due to the number of apples
      there were. The end.`)
+//yipee
