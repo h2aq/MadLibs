@@ -4,6 +4,15 @@ let randomNum = Math.floor(Math.random()*answers.length);
 let answer = answers[randomNum];
 console.log("Hello! I'm a magic 8 ball! Please type to provide me a question in the prompt below. To quit, simply type 'quit'");
 
-let word = readLine.question('Ask me a question: ');
+let x = 0;
+
+let word = readLine.question('Please ask me a question: ');
 console.log(answer);
 
+
+
+
+
+
+
+//couldnt do it
