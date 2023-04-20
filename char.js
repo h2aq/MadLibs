@@ -3,7 +3,7 @@ const readLine = require('readline-sync');
 let diceRolled = [];
 let eyeColors = ['BLUE', 'GREEN', 'BROWN', 'HAZEL', 'RED', 'BLACK', 'AMBER'];
 let races = ['Vesperian', 'Saiyan', 'Human', 'Dwarf', 'Elf', 'Snake'];
-let jobs = ['Fighter', 'Rogue', 'Magician', 'Thief', 'Archer', 'Engineer', 'Merchant', 'Dragoon'];
+let classes = ['Fighter', 'Rogue', 'Magician', 'Thief', 'Archer', 'Engineer', 'Merchant', 'Dragoon'];
 let backgrounds = ['Warrior, you\'re trying to retire after many years of service for your people, but seems like it was a waste of time after all.', 'Voidwalker, after bounty hunting for your people it really seemed that the money wasn\'t worth it after all.', 'Deep Diver, even after all the horrors you\'ve faced in the past, it still wasn\'t enough to financially support you.', 'Peasant, you\'re finally making it up in the world, congrats on being an adventurer.', 'Royal, you\'ve always wondered what it was like to be an average adventurer, you\'ve always had looked up to them and wanted to be one but your family declined of that request.', 'Mentor, after a horrible tragedy that occurred in the temple you\'re forced to retire and find another way to make money.']
 let character1 = {
     //empty for now
@@ -43,9 +43,9 @@ function randomRace (race){
     let RandNum = Math.floor(Math.random()*race.length);
     return race[RandNum];
 }
-function randomJobs (jobss){
-    let Randjob = Math.floor(Math.random()*jobss.length);
-    return jobss[Randjob];
+function randomclass (x){
+    let randomclasses = Math.floor(Math.random()*x.length);
+    return x[randomclasses];
 }
 function randomBackground (backgrounnd){
     let randombackgrounds = Math.floor(Math.random()*backgrounnd.length);
@@ -62,9 +62,9 @@ function createChar(character, list){
     character.race = randomRace(races);
     character.race2 = randomRace(races);
     character.race3 = randomRace(races);
-    character.job = randomJobs(jobs);
-    character.job2 = randomJobs(jobs);
-    character.job3 = randomJobs(jobs);
+    character.classes = randomclass(classes);
+    character.classes2 = randomclass(classes);
+    character.classes3 = randomclass(classes);
     character.background = randomBackground(backgrounds);
     character.background2 = randomBackground(backgrounds);
     character.background3 = randomBackground(backgrounds);
@@ -106,7 +106,7 @@ function displayChar(char){
     console.log(`EyeColor: ${char.eyeColor}`);
     console.log(`Race: ${char.race}`);
     console.log(`Background: ${char.background}`)
-    console.log(`Job: ${char.job}`);
+    console.log(`Class: ${char.classes}`);
     console.log(`STR: ${char.str}`);
     console.log(`DEX: ${char.dex}`);
     console.log(`CON: ${char.consti}`);
@@ -120,9 +120,9 @@ function displayChar2(char){
     console.log('--------------------------------------')
     console.log(`Name: ${char.name2}`);
     console.log(`EyeColor: ${char.eyeColor2}`);
-    console.log(`Race: ${char.race}`);
+    console.log(`Race: ${char.race2}`);
     console.log(`Background: ${char.background2}`)
-    console.log(`Job: ${char.job2}`);
+    console.log(`Class: ${char.classes2}`);
     console.log(`STR: ${char.str2}`);
     console.log(`DEX: ${char.dex2}`);
     console.log(`CON: ${char.consti2}`);
@@ -138,7 +138,7 @@ function displayChar3(char){
     console.log(`EyeColor: ${char.eyeColor3}`);
     console.log(`Race: ${char.race3}`);
     console.log(`Background: ${char.background3}`)
-    console.log(`Job: ${char.job3}`);
+    console.log(`Class: ${char.classes3}`);
     console.log(`STR: ${char.str3}`);
     console.log(`DEX: ${char.dex3}`);
     console.log(`CON: ${char.consti3}`);
